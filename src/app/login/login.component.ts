@@ -13,8 +13,8 @@ data1="Enter your A/c number"
 // acno=""
 // or
 
-acno:any   //decleration of data  ----bcz data comes when act on the change event so we must declere the data outside the function and the decleared function we access through the this.variablename at the inside of the function
-psw:any
+// acno:any   //decleration of data  ----bcz data comes when act on the change event so we must declere the data outside the function and the decleared function we access through the this.variablename at the inside of the function
+// psw:any
 
 userDetails:any={
   1000:{username:"anu",acno:1000,password:"abc123",balance:0},
@@ -30,11 +30,38 @@ ngOnInit(): void{
 }
 
 //method
-login(){
+// login(){
   // alert("login worked")
-  var acnum=this.acno
-  var psw=this.psw
+//   var acnum=this.acno
+//   var psw=this.psw
+//   var userDetails=this.userDetails
+
+//   if (acnum in userDetails){
+// if(psw==userDetails[acnum]["password"]){
+//   alert('login success')
+// }else{
+//   alert('incurrect password')
+  
+// }
+//   }else{
+//     alert('incurrect account number')
+    //  } 
+//}
+    
+
+
+
+login(acnum:any,psw:any){
+
+  console.log(acnum.value,psw.value);
+
+  var acnum=acnum.value
+  var psw=psw.value
+  
+  // alert("login worked")
+  
   var userDetails=this.userDetails
+
 
   if (acnum in userDetails){
 if(psw==userDetails[acnum]["password"]){
@@ -47,19 +74,5 @@ if(psw==userDetails[acnum]["password"]){
     alert('incurrect account number')
   }
     
-}
-acnoChange(event:any){
-
- this.acno=event.target.value
-  // console.log(this.acno);
-  
-
-}
-
-pswdChange(event:any){
-
-this.psw=event.target.value
-console.log(this.psw);
-
 }
 }

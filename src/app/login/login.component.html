@@ -7,9 +7,9 @@
           
                 <h3 >Hello Guys Welcome to Net Banking... <i class="fa-solid fa-handshake-simple"></i></h3>
                 <h5 >Please Login Here...<i class="fa-solid fa-hand-point-down"></i></h5>
-                <input  (change)="acnoChange($event)" id="u1" name="uname"  class="form-control mt-3 p-2"     [placeholder]="data1">
-                <input     (change)="pswdChange($event)" type="password" id="p1" name="pname" placeholder="Enter Password Here" class="form-control mt-3 p-2">
-        <button  (click)="login()" class="btn mt-3" >Login</button>
+                <input #acno  id="u1" name="uname"  class="form-control mt-3 p-2"     [placeholder]="data1">
+                <input #psw     type="password" id="p1" name="pname" placeholder="Enter Password Here" class="form-control mt-3 p-2">
+        <button  (click)="login(acno,psw)" class="btn mt-3" >Login</button>
       </form>
       
     </div>
