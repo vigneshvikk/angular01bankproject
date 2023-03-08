@@ -13,8 +13,10 @@ data1="Enter your A/c number"
 // acno=""
 // or
 
-// acno:any   //decleration of data  ----bcz data comes when act on the change event so we must declere the data outside the function and the decleared function we access through the this.variablename at the inside of the function
-// psw:any
+acno:any//two way binding it must initialize data,also same data will write on the ngnodel...it is the easiest way
+psw:any
+
+
 
 userDetails:any={
   1000:{username:"anu",acno:1000,password:"abc123",balance:0},
@@ -30,38 +32,11 @@ ngOnInit(): void{
 }
 
 //method
-// login(){
+login(){
   // alert("login worked")
-//   var acnum=this.acno
-//   var psw=this.psw
-//   var userDetails=this.userDetails
-
-//   if (acnum in userDetails){
-// if(psw==userDetails[acnum]["password"]){
-//   alert('login success')
-// }else{
-//   alert('incurrect password')
-  
-// }
-//   }else{
-//     alert('incurrect account number')
-    //  } 
-//}
-    
-
-
-
-login(acnum:any,psw:any){
-
-  console.log(acnum.value,psw.value);
-
-  var acnum=acnum.value
-  var psw=psw.value
-  
-  // alert("login worked")
-  
+  var acnum=this.acno
+  var psw=this.psw
   var userDetails=this.userDetails
-
 
   if (acnum in userDetails){
 if(psw==userDetails[acnum]["password"]){
@@ -72,7 +47,10 @@ if(psw==userDetails[acnum]["password"]){
 }
   }else{
     alert('incurrect account number')
-  }
-    
+     } 
 }
+    
+
+
+
 }
