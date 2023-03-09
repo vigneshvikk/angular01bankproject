@@ -10,6 +10,9 @@
                 <input  [(ngModel)]="acno" id="u1" name="uname"  class="form-control mt-3 p-2"     [placeholder]="data1">
                 <input   [(ngModel)]="psw"   type="password" id="p1" name="pname" placeholder="Enter Password Here" class="form-control mt-3 p-2">
         <button  (click)="login()" class="btn mt-3" >Login</button>
+        <p class="mt-2 text-secondary">
+          dont have account? 
+          <a routerLink="register" style="text-decoration: none; color:white"><strong>create account</strong></a></p>
       </form>
       
     </div>

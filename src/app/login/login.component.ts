@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,7 @@ userDetails:any={
   1003:{username:"mega",acno:1003,password:"abc123",balance:0}
 }
 
-constructor(){}
+constructor(private router:Router){}
 
 ngOnInit(): void{
 
@@ -41,6 +42,11 @@ login(){
   if (acnum in userDetails){
 if(psw==userDetails[acnum]["password"]){
   alert('login success')
+
+  //redirection
+  this.router.navigateByUrl("dashboard")
+
+
 }else{
   alert('incurrect password')
   
